@@ -14,7 +14,7 @@ const ExperienceCarousel = ({ images }) => {
                 spaceBetween={0}
                 centeredSlides={true} // Center the active slide
                 autoplay={{
-                    delay: 3000, // Delay between scrolls
+                    delay: 2500, // Delay between scrolls
                     disableOnInteraction: false,
                     pauseOnMouseEnter: false,
                 }}
