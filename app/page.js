@@ -9,10 +9,11 @@ import ServiceCards from './components/services/ServiceCards';
 import WhoWeAre from './components/about/WhoWeAre';
 import OurCommitment from './components/about/OurCommitment';
 import { FaArrowRight } from 'react-icons/fa';
+import OurExperience from './components/experience/OurExperience';
 
 export default async function Home() {
 	const data = await fetchContent(query);
-	console.log(data);
+
 	return (
 		<PageContainer>
 			<LandingPageHero
@@ -37,6 +38,7 @@ export default async function Home() {
 				description3={data.intro.paragraphs[2]}
 				videoUrl={data.intro.youtubeUrl}
 			/>
+			<OurExperience />
 		</PageContainer>
 	);
 }

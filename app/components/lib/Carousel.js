@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import React from 'react';
 
 const Carousel = ({ data }) => {
+	
 	if (!data || data.length === 0) {
 		return <div>No logos to display</div>;
 	}
