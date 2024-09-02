@@ -29,10 +29,10 @@ const ExperienceCarousel = ({ images }) => {
                         <Image
                             src={image.imageUrl}
                             alt={`Carousel Image ${index + 1}`}
-                            width={450}
-                            height={400}
+                            width={550}
+                            height={550}
                             style={{ display: 'block' }}
-                            className="shadow-lg shadow-primary/30 rounded-lg"
+                            className="shadow-lg shadow-primary/30 lg:rounded-lg"
                         />
                     </SwiperSlide>
                 ))}
