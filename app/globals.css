@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	@apply bg-light text-tertiary;
+}
+.glimmer-text {
+	background: linear-gradient(
+		90deg,
+		#f0f8ff 40%,
+		#7DB5E9 50%,
+		#f0f8ff 60%
+	);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+}
+
+
+
+
+/* FORM */
+.form-container {
+	@apply grid gap-6 border border-primary shadow-lg p-6;
+}
+
+.form-label {
+	@apply text-sm font-semibold text-primary;
+}
+
+.form-input {
+	@apply w-full p-2 border border-primary rounded-md;
+}
+
+.scrollbar-hide {
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none; /* Chrome, Safari, Opera */
+}
+
+.no-scroll {
+	overflow: hidden;
+}
