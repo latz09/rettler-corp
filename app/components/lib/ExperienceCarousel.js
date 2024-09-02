@@ -1,52 +1,46 @@
 "use client";
 
-import { motion, useAnimation } from 'framer-motion';
-import { useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/autoplay'; // Import the CSS for autoplay
+
 import Image from 'next/image';
 
 const ExperienceCarousel = ({ images }) => {
-    const controls = useAnimation();
-
-    // Duplicate images for seamless looping
-    const extendedImages = [...images, ...images];
-
-    useEffect(() => {
-        if (images && images.length > 0) {
-            controls.start({
-                x: ['0%', '-100%'], // Move from 0% to -100% of the container width
-                transition: {
-                    x: {
-                        repeat: Infinity, // Repeat indefinitely
-                        repeatType: 'loop',
-                        duration: 10, // Adjust the duration for speed
-                        ease: 'linear', // Linear movement for smooth scrolling
-                    },
-                },
-            });
-        }
-    }, [images, controls]);
-
     return (
-        <div style={{ overflow: 'hidden', whiteSpace: 'nowrap', width: '100%', height: 'auto' }}>
-            <motion.div
-                className="space-x-4 grid place-items-center m-8" 
-                animate={controls}
-                style={{ display: 'flex' }}
+        <div style={{ overflow: 'hidden', width: '100%' }}>
+            <Swiper
+                spaceBetween={0}
+                centeredSlides={true} // Center the active slide
+                autoplay={{
+                    delay: 3000, // Delay between scrolls
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: false,
+                }}
+                speed={1000} // Adjust speed for smooth transition
+                loop={true}
+                modules={[Autoplay]}
+                slidesPerView={1} // Show only one slide at a time
+                style={{ width: '100%', height: 'auto' }}
             >
-                {extendedImages.map((image, index) => (
-                    <motion.div key={index} style={{ flexShrink: 0 }}>
+                {images.map((image, index) => (
+                    <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center' }}>
                         <Image
                             src={image.imageUrl}
                             alt={`Carousel Image ${index + 1}`}
-                            width={700} // Or set a dynamic width based on your needs
-                            height={700} // Or set a dynamic height based on your needs
+                            width={450}
+                            height={400}
                             style={{ display: 'block' }}
+                            className="shadow-lg shadow-primary/30 rounded-lg"
                         />
-                    </motion.div>
+                    </SwiperSlide>
                 ))}
-            </motion.div>
+            </Swiper>
         </div>
     );
 };
 
 export default ExperienceCarousel;
+
+export const revalidate = 1;
