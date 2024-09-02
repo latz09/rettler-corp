@@ -16,7 +16,7 @@ const OurExperience = async () => {
 			<ExperienceCarousel images={data.images} />
 			<div className='grid place-items-center'>
 				<div className='mt-4 cursor-pointer py-2 px-6 bg-primary  text-light rounded-full font-bold lg:text-lg '>
-					<span className=''>Get Started Now</span>
+					<span className=''>View Our Projects</span>
 					<FaArrowRight className='inline-block ml-2' />
 				</div>
 			</div>
