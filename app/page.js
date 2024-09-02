@@ -12,25 +12,29 @@ import { FaArrowRight } from 'react-icons/fa';
 
 export default async function Home() {
 	const data = await fetchContent(query);
-
+	console.log(data);
 	return (
 		<PageContainer>
 			<LandingPageHero
 				image={data.landingHero.landingImage}
 				heading={data.landingHero.heading}
+				subheading={data.landingHero.subheading}
 				logoImage={data.landingHero.logoImage}
 			/>
-			<WhoWeAre description={data.intro.paragraphs[1]} />
+			<WhoWeAre description={data.intro.paragraphs[3]} />
 			<Affiliations />
 
 			<ServiceCards data={data.services} />
-			<div className="grid place-items-center">
-			<div className='mt-4 cursor-pointer py-2 px-6 bg-primary  text-light rounded-full font-bold lg:text-lg '>
-				<span className=''>Get Started Now</span>
-				<FaArrowRight className='inline-block ml-2' />
-			</div></div>
+			<div className='grid place-items-center'>
+				<div className='mt-4 cursor-pointer py-2 px-6 bg-primary  text-light rounded-full font-bold lg:text-lg '>
+					<span className=''>Get Started Now</span>
+					<FaArrowRight className='inline-block ml-2' />
+				</div>
+			</div>
 			<OurCommitment
-				description={data.intro.paragraphs[0]}
+				description1={data.intro.paragraphs[0]}
+				description2={data.intro.paragraphs[1]}
+				description3={data.intro.paragraphs[2]}
 				videoUrl={data.intro.youtubeUrl}
 			/>
 		</PageContainer>

@@ -3,7 +3,7 @@ import AnimateUp from '../utils/animations/AnimateUp';
 import { Description, Heading } from '../utils/Typography';
 import VideoPlayer from '../utils/videos/VideoPlayer';
 
-const OurCommitment = ({ description, videoUrl }) => {
+const OurCommitment = ({ description1, description2, description3, videoUrl }) => {
 	return (
 		<div className='bg-dark'>
 			<div className='grid lg:grid-cols-2 place-items-center gap-16 lg:px-4 max-w-7xl mx-auto  pt-12 lg:pb-16 lg:pt-16'>
@@ -16,10 +16,19 @@ const OurCommitment = ({ description, videoUrl }) => {
 						color='text-light'
 					/>
 					<AnimateUp>
+						<div className="grid gap-3">
 						<Description
-							text={description}
+							text={description1}
 							color='text-light md:text-justify'
 						/>
+						<Description
+							text={description2}
+							color='text-light md:text-justify'
+						/>
+						<Description
+							text={description3}
+							color='text-light md:text-justify'
+						/></div>
 					</AnimateUp>
 				</div>
 				<div className='w-full '>

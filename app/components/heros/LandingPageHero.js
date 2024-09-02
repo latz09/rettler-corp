@@ -2,7 +2,7 @@ import Image from 'next/image';
 import GradientHeading from '../utils/animations/GradientHeading';
 import ButtonLink from '../utils/buttons/ButtonLink';
 
-const LandingPageHero = ({ image, heading, logoImage }) => {
+const LandingPageHero = ({ image, heading, logoImage, subheading }) => {
 	return (
 		<div className='relative h-[75vh] flex flex-col justify-center items-center'>
 			{/* Background Image */}
@@ -26,7 +26,7 @@ const LandingPageHero = ({ image, heading, logoImage }) => {
 				</div>
 				<GradientHeading text={heading} />
 				<div className="text-light/80 text-2xl lg:text-3xl mt-2 ">
-					Bringing innovative ideas to life with precision and expertise.
+					{subheading}
 				</div>
 				<div className='mt-6 lg:mt-12 grid gap-4 md:flex lg:gap-8'>
 					<ButtonLink href='/' title='Get Started Today' theme='primary' />

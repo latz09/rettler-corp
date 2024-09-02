@@ -24,7 +24,7 @@ export default Footer;
 
 const FooterNav = () => {
 	return (
-		<div className='grid  gap-4 '>
+		<div className='grid  gap-4 lg:gap-6 '>
 			{navigationLinks.map(({ title, href }) => (
 				<Link href={href} key={title} className='text-dark text-xl'>
 					{title}
@@ -59,7 +59,7 @@ const CopyRight = () => {
 
 const Socials = () => {
 	return (
-		<div className='flex gap-8 lg:gap-16 items-center'>
+		<div className='flex justify-around items-center  w-full lg:w-2/3 mx-auto'>
 			<div>
 				<FaFacebookF className='text-3xl text-primary' />
 			</div>
