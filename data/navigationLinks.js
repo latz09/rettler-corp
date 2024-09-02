@@ -4,7 +4,7 @@ export const navigationLinks = [
 		href: '/',
 	},
 	{
-		title: 'Experience',
+		title: 'Our Experience',
 		href: '/',
 	},
 	{

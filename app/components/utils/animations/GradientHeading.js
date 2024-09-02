@@ -22,7 +22,7 @@ const GradientHeading = ({ text }) => {
 					delay: 0.4,
 				}}
 			>
-				<p className='mt-5  text-4xl md:text-5xl lg:text-7xl  uppercase '>{text}</p>
+				<p className='mt-5  text-3xl md:text-5xl lg:text-7xl  uppercase '>{text}</p>
 			</motion.div>
 		</motion.div>
 	);

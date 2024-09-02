@@ -8,6 +8,7 @@ import Affiliations from './components/lib/Affiliations';
 import ServiceCards from './components/services/ServiceCards';
 import WhoWeAre from './components/about/WhoWeAre';
 import OurCommitment from './components/about/OurCommitment';
+import { FaArrowRight } from 'react-icons/fa';
 
 export default async function Home() {
 	const data = await fetchContent(query);
@@ -23,7 +24,11 @@ export default async function Home() {
 			<Affiliations />
 
 			<ServiceCards data={data.services} />
-			<Intro data={data.intro} whoWeAreImage={data.whoWeAre.whoWeAreImage} />
+			<div className="grid place-items-center">
+			<div className='mt-4 cursor-pointer py-2 px-6 bg-primary  text-light rounded-full font-bold lg:text-lg '>
+				<span className=''>Get Started Now</span>
+				<FaArrowRight className='inline-block ml-2' />
+			</div></div>
 			<OurCommitment
 				description={data.intro.paragraphs[0]}
 				videoUrl={data.intro.youtubeUrl}

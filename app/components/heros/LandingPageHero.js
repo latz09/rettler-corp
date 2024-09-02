@@ -21,11 +21,11 @@ const LandingPageHero = ({ image, heading, logoImage }) => {
 
 			{/* Content */}
 			<div className='relative z-20 text-center grid place-items-center px-2'>
-				<div className='opacity-30'>
+				<div className='opacity-70'>
 					<Image src={logoImage} height={350} width={350} alt='Logo' />
 				</div>
 				<GradientHeading text={heading} />
-				<div className="text-light/80 text-2xl lg:text-3xl mt-2 font-bold">
+				<div className="text-light/80 text-2xl lg:text-3xl mt-2 ">
 					Bringing innovative ideas to life with precision and expertise.
 				</div>
 				<div className='mt-6 lg:mt-12 grid gap-4 md:flex lg:gap-8'>
