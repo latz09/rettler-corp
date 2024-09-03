@@ -15,7 +15,7 @@ const poppins = Lato({
 export const metadata = {
 	metadataBase: new URL('https://www.latzwebdesign.com/'),
 	title: {
-		default: 'Starter - Latz Web Design',
+		default: 'Rettler Corporation',
 		template: `%s | Latz Web Design `,
 	},
 	description: ``,
