@@ -8,7 +8,7 @@ const PageContainer = ({ children, className }) => {
 			animate={{ opacity: 1 }}
 			exit={{ opacity: 0 }}
 			transition={{ duration: 2 }}
-			className={`${className} grid gap-16 lg:gap-24 pb-24`}
+			className={`${className} grid gap-16 lg:gap-24 `}
 		>
 			{children}
 		</motion.main>

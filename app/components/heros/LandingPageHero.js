@@ -4,7 +4,7 @@ import ButtonLink from '../utils/buttons/ButtonLink';
 
 const LandingPageHero = ({ image, heading, logoImage, subheading }) => {
 	return (
-		<div className='relative h-[75vh] flex flex-col justify-center items-center'>
+		<div className='relative h-[65vh] lg:h-[75vh] flex flex-col justify-center items-center'>
 			{/* Background Image */}
 			<Image
 				src={image}
