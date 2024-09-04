@@ -21,7 +21,7 @@ export default DesktopNavbar;
 
 const NavigationLinks = ({ navLinks }) => {
 	return (
-		<div className='flex justify-around items-center w-full max-w-7xl mx-auto pt-2 pb-4'>
+		<div className='flex justify-around items-center w-full max-w-7xl mx-auto pt-2 pb-6'>
 			{navLinks.map((link, index) => (
 				<Link key={index} href={link.href} passHref>
 					<span
