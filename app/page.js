@@ -22,7 +22,7 @@ export default async function Home() {
 				subheading={data.landingHero.subheading}
 				logoImage={data.landingHero.logoImage}
 			/>
-			<WhoWeAre description={data.intro.paragraphs[3]} />
+			<WhoWeAre description={data.intro.paragraphs[3]} image={data.whoWeAre.whoWeAreImage} />
 			<Affiliations />
 
 			<ServiceCards data={data.services} />
