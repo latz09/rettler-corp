@@ -20,12 +20,12 @@ const MobileNavbar = ({ navLinks }) => {
 				<Logo height={175} width={175} />
 				<MenuIcon toggleNav={toggleNav} isNavOpen={isNavOpen} />
 			</div>
-
+			{/* 
 			<ModalOverlay isOpen={isNavOpen} onClose={toggleNav}>
 				<AnimatePresence>
 					{isNavOpen && (
 						<motion.div
-							className='fixed inset-y-0 right-0 bg-primary t w-full shadow-lg p-6 z-50'
+							className='fixed inset-y-0 right-0 bg-primary t w-full shadow-lg p-6 z-[9999]'
 							initial={{ x: '100%' }}
 							animate={{ x: '0%' }}
 							exit={{ x: '100%' }}
@@ -48,6 +48,7 @@ const MobileNavbar = ({ navLinks }) => {
 					)}
 				</AnimatePresence>
 			</ModalOverlay>
+			 */}
 		</div>
 	);
 };

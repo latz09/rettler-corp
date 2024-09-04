@@ -12,17 +12,17 @@ const MenuIcon = ({ toggleNav, isNavOpen }) => {
 			>
 				<div className='flex flex-col space-y-1'>
 					<span
-						className={`block w-8 h-1 bg-light transition-transform ${
+						className={`block w-8 h-1 bg-dark transition-transform ${
 							isNavOpen ? 'rotate-45 translate-y-2' : 'bg-primary'
 						}`}
 					/>
 					<span
-						className={`block w-8 h-1 bg-light transition-opacity ${
+						className={`block w-8 h-1 bg-dark transition-opacity ${
 							isNavOpen ? 'opacity-0' : 'bg-primary'
 						}`}
 					/>
 					<span
-						className={`block w-8 h-1 bg-light transition-transform ${
+						className={`block w-8 h-1 bg-dark transition-transform ${
 							isNavOpen ? '-rotate-45 -translate-y-2' : 'bg-primary'
 						}`}
 					/>
